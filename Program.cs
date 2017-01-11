@@ -11,57 +11,71 @@ namespace Tic_Tac_Toe
         static void Main(string[] args)
         {
             {
-                string Instructions = "Enter the number that corrosponds to the space you want";
-                string Selection;
-                string P1;
-                string P2;
+                string Player1;
+                string Player2;
 
-                Console.WriteLine(Instructions);
-                Console.WriteLine("Player One Name:");
-                P1 = Console.ReadLine();
-                Console.WriteLine("Player Two Name:");
-                P2 = Console.ReadLine();
-                Console.Clear();
+                Console.WriteLine("Player One Enter Your Name And Press Enter.");
+                Player1 = Console.ReadLine();
+                Console.WriteLine("Player Two Enter Your Name And Press Enter.");
+                Player2 = Console.ReadLine();
+                Console.WriteLine($"Welcome {Player1} you are X. Please select a number that corrosponds to the space you want");
 
-
-
-
-            
-            string[] board = {
-                "______0", "______1", "______2", "______3", "______4", "______5", "______6", "______7", "______8"
-        };
+            }
+            for (int i = 0; i < 20; i++)
             {
 
-                int counter = 0;
-                foreach (string place in board)
+
+                string[] Lines = {"",
+                              ""};
                 {
-                    Console.Write(" " + place);
-                    if (counter == 2)
+                    string[] Board =
+                    {"__________0","__________1","__________2","__________3","__________4","__________5","__________6","__________7","__________8"};
                     {
-                        Console.WriteLine("");
-                        counter = 0;
+                        int counter = 0;
+                        foreach (string Place in Board)
+                        {
+                            Console.Write("     " + Place);
+                            if (counter == 2)
 
+                            {
+                                Console.Out.NewLine = "\r\n\r\n";
+                                foreach (string Line in Lines)
+                                {
+                                    Console.WriteLine(Line);
+                                    counter = 0;
+                                }
+                            }
+                            else
+                            {
+                                counter++;
+                            }
+                        }
                     }
-                    else
+                    
+                        int PlayerEntry = int.Parse(Console.ReadLine());
+                        Board[PlayerEntry] = "___X___";
+                        Console.Clear();
+                         
+                    
+                    if (PlayerEntry > 8)
                     {
-                        counter++;
-                        Selection = Console.ReadLine();
-                        if (Selection == "1") ;
+                        Console.WriteLine("Please choose another entry");
                     }
-
 
                 }
 
+
+
+
+
+
+
+
             }
 
-
         }
+
     }
-
-
-        
-    
-
-
+}
 
 
