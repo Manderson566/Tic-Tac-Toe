@@ -12,66 +12,55 @@ namespace Tic_Tac_Toe
         {
             {
                 string Instructions = "Enter the number that corrosponds to the space you want";
-
+                string Selection;
+                string P1;
+                string P2;
 
                 Console.WriteLine(Instructions);
-            }
+                Console.WriteLine("Player One Name:");
+                P1 = Console.ReadLine();
+                Console.WriteLine("Player Two Name:");
+                P2 = Console.ReadLine();
+                Console.Clear();
+
+
+
+
+            
             string[] board = {
                 "______0", "______1", "______2", "______3", "______4", "______5", "______6", "______7", "______8"
         };
-
-            int counter = 0;
-            foreach (string place in board)
             {
-                Console.Write(" " + place);
-                if (counter == 2)
+
+                int counter = 0;
+                foreach (string place in board)
                 {
-                    Console.WriteLine("");
-                    counter = 0;
-
-                }
-                else
-                {
-                    counter++;
-                }
-
-            }
-            
-                for (int i = 0; i < 9; i++) 
-
-                { 
-            string[] board2 = {
-                "______0", "______1", "______2", "______3", "______4", "______5", "______6", "______7", "______8"
-        };
-            {
-                int Player = int.Parse(Console.ReadLine());
-                board2[Player] = "___X___";
-            }
-
-
-            int counter2 = 0;
-                foreach (string place2 in board2)
-                {
-                    Console.Write(" " + place2);
-                    if (counter2 == 2)
+                    Console.Write(" " + place);
+                    if (counter == 2)
                     {
                         Console.WriteLine("");
-                        counter2 = 0;
+                        counter = 0;
 
                     }
                     else
                     {
-                        counter2++;
-
+                        counter++;
+                        Selection = Console.ReadLine();
+                        if (Selection == "1") ;
                     }
+
+
                 }
-       
 
             }
 
+
         }
     }
-}
+
+
+        
+    
 
 
 
